@@ -1,0 +1,29 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "",
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "includePath": [
+                "/home/mostafa/catkin_ws/devel/include/**",
+                "/home/mostafa/catkin_ws2/devel/include/**",
+                "/opt/ros/melodic/include/**",
+                "/home/mostafa/catkin_ws2/src/action_server/include/**",
+                "/home/mostafa/catkin_ws2/src/librealsense/include/**",
+                "/home/mostafa/catkin_ws2/src/realsense-ros/realsense2_camera/include/**",
+                "/home/mostafa/catkin_ws2/src/staubli/staubli/include/**",
+                "/home/mostafa/catkin_ws2/src/staubli/staubli_move_group_interface/include/**",
+                "/home/mostafa/catkin_ws/src/universal_robot/ur_kinematics/include/**",
+                "/home/mostafa/catkin_ws/src/universal_robot/ur_modern_driver/include/**",
+                "/usr/include/**"
+            ],
+            "name": "ROS",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}

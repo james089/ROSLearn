@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: staubli
+    relative_path: urdf/staubli.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/staubli.srdf
+  CONFIG:
+    author_name: bojun
+    author_email: bojun.lin@glidewelldental.com
+    generated_timestamp: 1576183106

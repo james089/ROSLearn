@@ -1,0 +1,6 @@
+<launch>
+
+  <node name="staubli_move_group_interface" pkg="staubli_move_group_interface" type="staubli_move_group_interface" respawn="false" output="screen">
+  </node>
+
+</launch>

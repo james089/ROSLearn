@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "",
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "includePath": [
+                "/home/glidewell/catkin_ws/devel/include/**",
+                "/opt/ros/melodic/include/**",
+                "/home/glidewell/catkin_ws/src/beginner_tutorials/include/**",
+                "/home/glidewell/catkin_ws/src/camera_umd/jpeg_streamer/include/**",
+                "/home/glidewell/catkin_ws/src/my_robot_auto/include/**",
+                "/home/glidewell/catkin_ws/src/staubli/include/**",
+                "/home/glidewell/catkin_ws/src/universal_robot/ur_kinematics/include/**",
+                "/home/glidewell/catkin_ws/src/universal_robot/ur_modern_driver/include/**",
+                "/home/glidewell/catkin_ws/src/camera_umd/uvc_camera/include/**",
+                "/usr/include/**"
+            ],
+            "name": "ROS",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}
