@@ -105,68 +105,7 @@ class MoveGroupControl {
     }
 };
 
-/*
-void moveGroupInterfaceSetup()
-{
-  move_group = moveit::planning_interface::MoveGroupInterface(PLANNING_GROUP);
-  visual_tools = moveit_visual_tools::MoveItVisualTools("world");
-
-  joint_model_group = move_group.getCurrentState()->getJointModelGroup(PLANNING_GROUP);
-  visual_tools.deleteAllMarkers();
-  visual_tools.loadRemoteControl();
-  text_pose = Eigen::Isometry3d::Identity();
-  text_pose.translation().z() = 1.25;
-  visual_tools.publishText(text_pose, "MoveGroupInterface", rvt::WHITE, rvt::XLARGE);
-
-  visual_tools.trigger();
-
-  ROS_INFO_NAMED("tutorial", "Planning frame: %s", move_group.getPlanningFrame().c_str());
-
-  // We can also print the name of the end-effector link for this group.
-  ROS_INFO_NAMED("tutorial", "End effector link: %s", move_group.getEndEffectorLink().c_str());
-
-  // We can get a list of all the groups in the robot:
-  ROS_INFO_NAMED("tutorial", "Available Planning Groups:");
-  std::copy(move_group.getJointModelGroupNames().begin(), move_group.getJointModelGroupNames().end(),
-            std::ostream_iterator<std::string>(std::cout, ", "));
-}
-*/
-
 MoveGroupControl* p_moveGroupCtrl;
-
-/*
-
-void displayGoalPose(MoveGroupControl *mMGC, double _target_x, double _target_y, double _target_z)
-{
-  const double SAFE_D = 0.1;
-  mMGC->visual_tools.deleteAllMarkers();
-  target_pose = mMGC->move_group.getCurrentPose().pose;
-  target_pose.position.x -= _target_x /1000;   // from mm to m
-  target_pose.position.y -=  _target_y /1000;   // from mm to m
-  target_pose.position.z += _target_z / 1000 - SAFE_D;
-  mMGC->visual_tools.publishAxisLabeled(target_pose, "targetPose");
-  mMGC->visual_tools.trigger();
-}
-
-void planToPose(MoveGroupControl *mMGC, geometry_msgs::Pose targetPose)
-{
-  mMGC->move_group.setPoseTarget(targetPose);
-
-  moveit::planning_interface::MoveGroupInterface::Plan my_plan;
-
-  bool success = (mMGC->move_group.plan(my_plan) == moveit::planning_interface::MoveItErrorCode::SUCCESS);
-
-  ROS_INFO_NAMED("Visualizing plan (pose goal) %s", success ? "SUCCESS" : "FAILED");
-
-  if(success) 
-  {
-    sleep(3.0);
-    mMGC->move_group.execute(my_plan);
-    sleep(5.0);
-  }
-  isPlanning = false;
-}
-*/
 
 #pragma region ========== helpers ===============
 class BadConversion : public std::runtime_error {
@@ -265,5 +204,6 @@ int main(int argc, char** argv)
     loop_rate.sleep();
   }
 
+  delete p_moveGroupCtrl;
   return 0;
 }

@@ -92,7 +92,7 @@ class ImageConverter
     void DrawEllipseAndBox(const cv::Mat &inputImage, cv::Mat &outputImage)
     {
       int thresh = 250;
-      const int CSZ_THR = 144;
+      const int CSZ_THR = 100;
       Mat canny_output;
       Canny( inputImage, canny_output, thresh, thresh*2 );
       vector<vector<Point> > contours;
